@@ -1,2 +1,0 @@
-<?php
- namespace imwpf\modules; class MetaBox { public function __construct($key, $name, $content) { $this->key = $key; $this->name = $name; $this->content = $content; } public function add() { add_action('add_meta_boxes', array($this, 'createMetaBox')); } public function createMetaBox() { add_meta_box($this->key, $this->name, array($this, 'showMetaBoxAfterEditor')); } public function showMetaBoxAfterEditor() { echo $this->content; } } 

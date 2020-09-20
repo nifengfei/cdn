@@ -1,0 +1,2 @@
+<?php
+ namespace imwpf\modules\logger\converter; class Json implements ConverterInterface { public function convert($data, $levelString = '') { if (is_array($data)) { } elseif (is_string($data)) { $data = array('content' => $data); } else { $data = array('content' => '日志内容错误'); } $data['level'] = $levelString; $data['_datetime'] = date('Y-m-d H:i:s'); $data['_id'] = mt_rand(1000000, 9999999); return json_encode($data, JSON_UNESCAPED_UNICODE); } } 

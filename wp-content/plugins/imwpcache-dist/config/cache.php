@@ -1,0 +1,1 @@
+<?php return array('type'=>'file','host'=>'','port'=>'','expires'=>'0','has_mobile_page'=>'1','has_ajax'=>'0','security'=>'8a8a0d1113','submit'=>'提交','compare'=>'0');

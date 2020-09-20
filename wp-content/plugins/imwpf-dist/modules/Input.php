@@ -1,0 +1,2 @@
+<?php
+namespace imwpf\modules; class Input { public static function int($key, $default=0) { if (isset($_REQUEST[$key])) { return intval($_REQUEST[$key]); } return $default; } public static function str($key, $default='') { if (isset($_REQUEST[$key])) { return trim(strval($_REQUEST[$key])); } return $default; } public static function xss($value) { return htmlspecialchars($value); } public static function arr($key, $default = array()) { if (isset($_REQUEST[$key]) && is_array($_REQUEST[$key])) { return $_REQUEST[$key]; } return $default; } }

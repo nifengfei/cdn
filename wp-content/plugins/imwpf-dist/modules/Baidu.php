@@ -1,0 +1,2 @@
+<?php
+namespace imwpf\modules; class Baidu { public static function push($siteURL, $token, $url) { $config = array( 'site' => $siteURL, 'token' => $token, ); $api = 'http://data.zz.baidu.com/urls?' . http_build_query($config); $result = HTTP::text($api, $url, 5); if ($result) { return $result; } return false; } } 
